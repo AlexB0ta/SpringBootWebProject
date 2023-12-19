@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat Interogare 6.03-a</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div th:replace="homepage :: myheader"></div>
+
+<div class="container-fluid full-height-container">
+
+    <div class="row  mt-5 text-center" ><h1>Rezultat Interogare 6.03-a</h1></div>
+
+
+    <div class="row mt-5" >
+        <p><strong>Cerinta:</strong>
+            Să se găsească detaliile pentru devizele care au constatare și sunt nefinalizate la data ‚01-SEP-2023’, ordonat după data introducere.</p>
+    </div>
+
+    <table class="table mt-5">
+        <thead>
+        <tr class="bg-warning">
+        <th>ID</th>
+        <th>data_introducere</th>
+        <th>simptome</th>
+        <th>defect</th>
+        <th>data_constatare</th>
+        <th>data_finalizare</th>
+        <th>durata</th>
+        <th>manopera_ora</th>
+        <th>total</th>
+        <th>id_client</th>
+        <th>id_depanator</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="deviz : ${devize}">
+        <td th:text="${deviz.id_d}"></td>
+        <td th:text="${deviz.data_introducere}"></td>
+        <td th:text="${deviz.simptome}"></td>
+        <td th:text="${deviz.defect}"></td>
+        <td th:text="${deviz.data_constatare}"></td>
+        <td th:text="${deviz.data_finalizare}"></td>
+        <td th:text="${deviz.durata}"></td>
+        <td th:text="${deviz.manopera_ora}"></td>
+        <td th:text="${deviz.total}"></td>
+        <td th:text="${deviz.id_client}"></td>
+        <td th:text="${deviz.id_depanator}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+</body>
+</html>

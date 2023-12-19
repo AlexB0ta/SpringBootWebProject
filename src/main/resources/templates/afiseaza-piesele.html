@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat Interogare 6.03-b</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid full-height-container">
+
+    <div class="row  mt-5 text-center" ><h1>Rezultat Interogare 6.03-b</h1></div>
+
+
+    <div class="row mt-5" >
+        <p><strong>Cerinta:</strong>
+            Să se găsească detaliile pieselor care au cantitate_stoc sub 5 ordonat crescător după cantitate_stoc și descrescător după descriere.</p>
+    </div>
+
+    <table class="table mt-5">
+        <thead>
+        <tr class="bg-warning">
+        <th>ID</th>
+        <th>Descriere</th>
+        <th>Fabricant</th>
+        <th>Cantitate în Stoc</th>
+        <th>Preț</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="piesa : ${piese}">
+        <td th:text="${piesa.id_p}"></td>
+        <td th:text="${piesa.descriere}"></td>
+        <td th:text="${piesa.fabricant}"></td>
+        <td th:text="${piesa.cantitate_stoc}"></td>
+        <td th:text="${piesa.pret_c}"></td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>
