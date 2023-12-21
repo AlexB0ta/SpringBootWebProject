@@ -10,5 +10,21 @@ public class HomeController {
     public String home() {
         return "homepage";
     }
+
+    @GetMapping("/interogari")
+    public String interogari() {
+        return "interogari";
+    }
+
+    @GetMapping("/crudhome")
+    public String crudhome() {
+        return "crud-home";
+    }
+
+    @GetMapping("/create")
+    public String create() {
+        return "create-table";
+    }
+
 }
 

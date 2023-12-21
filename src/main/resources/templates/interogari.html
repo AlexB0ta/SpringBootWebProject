@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat Interogare 6.04-b</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body class="d-flex flex-column">
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid">
+    <div class="p-4 my-1 bg-light rounded-3 " ALIGN="center">
+        <div class="row justify-content-md-center" style="margin-top:40px;">
+            <div class="row">
+                <h2>Alegeti interogarea dorita</h2>
+            </div>
+
+
+            <div class="row pt-5">
+                <div class="col"><a class="btn btn-warning" href="/query1" role="button">Interogare 6.03-a</a></div>
+                <div class="col"><a class="btn btn-warning" href="/query2" role="button">Interogare 6.03-b</a></div>
+            </div>
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col"><a class="btn btn-outline-warning" href="/query3" role="button">Interogare 6.04-a</a></div>
+                <div class="col"><a class="btn btn-outline-warning" href="/query4" role="button">Interogare 6.04-b</a></div>
+            </div>
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col"><a class="btn btn-warning" href="/query5" role="button">Interogare 6.05-a</a></div>
+                <div class="col"><a class="btn btn-warning" href="/query6" role="button">Interogare 6.05-b</a></div>
+            </div>
+
+            <div class="row" style="margin-top:10px;">
+                <div class="col"><a class="btn btn-outline-warning" href="/query7" role="button">Interogare 6.06-a</a></div>
+                <div class="col"><a class="btn btn-outline-warning" href="/query8" role="button">Interogare 6.06-b</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="mb-2 bg-light rounded-3 mt-2">
+            <div class="row justify-content-md-center py-2">
+                <div class="col align-self-center">
+                    <p>Selectează Interogarea Dorită: Ai la dispoziție 8 interogări specializate care îți permit să accesezi informații relevante în funcție de nevoile tale.</p>
+                </div>
+                <div class="col">
+                <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1282569/0712-Bad_Practices_in_Database_Design_-_Are_You_Making_These_Mistakes_Dan_Social-754bc73011e057dc76e55a44a954e0c3.png" class="image-fluid rounded custom-image2">
+                </div>
+                <div class="col align-self-center">
+                    <p> Explorează domeniul vast al datelor noastre cu doar câteva clicuri.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>

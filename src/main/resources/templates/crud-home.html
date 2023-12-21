@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat Interogare 6.04-b</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body class="d-flex flex-column">
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid full-height-container">
+    <div class="container">
+        <div class="bg-light p-5 my-4 rounded-3">
+            <div class="row pb-5" align="center">
+                <h2>Alegeti Operatia Dorita</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="/create">
+                        <img src="https://cdn2.iconfinder.com/data/icons/flat-database/512/new_query-512.png" class="image-fluid custom-image">
+                        <p class="text-success px-5"><strong>Create tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="https://icons.veryicon.com/png/o/education-technology/educational-icon/read-13.png" class="image-fluid custom-image">
+                        <p class="text-success px-5"><strong>Read tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/5309/5309792.png" class="image-fluid custom-image">
+                        <p class="text-success px-5"><strong>Update tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3807/3807871.png" class="image-fluid custom-image">
+                        <p class="text-success px-5"><strong>Delete tables</strong></p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>

@@ -11,6 +11,17 @@ html, body {
 }
 
 .full-height-container {
-    min-height: 100%;
+    min-height: 82%;
     position: relative;
+}
+
+.custom-image {
+    height: 200px; /* Set the desired height for all images */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
+}
+
+.custom-image2 {
+    height: 350px; /* Set the desired height for all images */
+    width: 700px;
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
 }

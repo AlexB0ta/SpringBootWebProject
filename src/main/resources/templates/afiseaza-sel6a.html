@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezultat Interogare 6.06-a</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid full-height-container bg-light">
+
+    <div class="row  mt-4 text-center" ><h1>Rezultat Interogare 6.06-a</h1></div>
+
+
+    <div class="row mt-5" >
+        <p><strong>Cerinta:</strong>
+            Să se găsească pentru fiecare depanator numărul de devize (nume_depanator, câte_devize) cu data_finalizare în luna septembrie 2023.</p>
+    </div>
+
+
+    <table class="table mt-5">
+        <thead>
+        <tr class="bg-warning">
+            <th>Nume Depanator</th>
+            <th>Numar de devize</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="deviz : ${sel6aList}">
+            <td th:text="${deviz.nume_depanator}"></td>
+            <td th:text="${deviz.cate_devize}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>

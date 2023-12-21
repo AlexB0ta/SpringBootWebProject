@@ -11,12 +11,15 @@ public class DevizRowMapper implements RowMapper<Deviz> {
     public Deviz mapRow(ResultSet resultSet,int RowNum) throws SQLException {
         Deviz deviz=new Deviz();
         deviz.setId_d(resultSet.getInt("id_d"));
-        deviz.setData_introducere(resultSet.getString("data_introducere"));
+        String aux=resultSet.getString("data_introducere").substring(0,10);
+        deviz.setData_introducere(aux);
         deviz.setAparat(resultSet.getString("aparat"));
         deviz.setSimptome(resultSet.getString("simptome"));
         deviz.setDefect(resultSet.getString("defect"));
-        deviz.setData_constatare(resultSet.getString("data_constatare"));
-        deviz.setData_finalizare(resultSet.getString("data_finalizare"));
+        aux=resultSet.getString("data_constatare").substring(0,10);
+        deviz.setData_constatare(aux);
+        aux=resultSet.getString("data_finalizare").substring(0,10);
+        deviz.setData_finalizare(aux);
         deviz.setDurata(resultSet.getInt("durata"));
         deviz.setManopera_ora(resultSet.getDouble("manopera_ora"));
         deviz.setTotal(resultSet.getDouble("total"));

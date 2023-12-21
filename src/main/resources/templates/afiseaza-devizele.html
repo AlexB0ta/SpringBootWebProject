@@ -10,11 +10,11 @@
 </head>
 <body>
 
-<div th:replace="homepage :: myheader"></div>
+<div th:replace="~{homepage :: myheader}"></div>
 
-<div class="container-fluid full-height-container">
+<div class="container-fluid full-height-container bg-light">
 
-    <div class="row  mt-5 text-center" ><h1>Rezultat Interogare 6.03-a</h1></div>
+    <div class="row  mt-4 text-center" ><h1>Rezultat Interogare 6.03-a</h1></div>
 
 
     <div class="row mt-5" >
@@ -55,6 +55,8 @@
     </tbody>
 </table>
 </div>
+
+<div th:replace="~{homepage :: myfooter}"></div>
 
 </body>
 </html>

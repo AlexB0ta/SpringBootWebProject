@@ -20,7 +20,12 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a href="/home" class="nav-item nav-link active">Home</a>
-                <a href="#" class="nav-item nav-link">Services</a>
+                <a href="/interogari" class="nav-item nav-link">Interogari</a>
+                <a href="/crudhome" class="nav-item nav-link">CRUD Home Page</a>
+                <a href="/create" class="nav-item nav-link">Create</a>
+                <a href="#" class="nav-item nav-link">Read</a>
+                <a href="#" class="nav-item nav-link">Update</a>
+                <a href="#" class="nav-item nav-link">Delete</a>
                 <a href="#" class="nav-item nav-link">About</a>
             </div>
         </div>
@@ -29,12 +34,28 @@
 </div>
 
 <div class="container-fluid full-height-container">
+
+    <div class="p-5 my-4 bg-info rounded-3">
+        <div class="row">
+            <div class="col align-self-center">
+                <h1>Home Page</h1>
+                <p>Pagina principala a aplicatie Web. Am creat un mediu intuitiv și atrăgător pentru a vă oferi o experiență plăcută și captivantă de la primul moment.<br><strong>Descoperă funcționalitățile noastre mai jos pe pagina.</strong></p>
+            </div>
+            <div class="col">
+                <img src="https://static.tildacdn.com/tild6262-6661-4034-b164-383063636462/What_is_SQL_Database.png" class="image-fluid custom-image2 rounded" alt="Main-Image">
+            </div>
+        </div>
+    </div>
+
+
     <div class="p-5 my-4 bg-light rounded-3 " ALIGN="center">
-        <h1>Home Page</h1>
-
-
     <div class="row justify-content-md-center" style="margin-top:40px;">
         <div class="row">
+            <h2>Alegeti interogarea dorita</h2>
+        </div>
+
+
+        <div class="row pt-5">
             <div class="col"><a class="btn btn-warning" href="/query1" role="button">Interogare 6.03-a</a></div>
             <div class="col"><a class="btn btn-warning" href="/query2" role="button">Interogare 6.03-b</a></div>
         </div>
@@ -50,23 +71,56 @@
         </div>
 
         <div class="row" style="margin-top:10px;">
-            <div class="col"><a class="btn btn-outline-warning" href="" role="button">Interogare 6.06-a</a></div>
-            <div class="col"><a class="btn btn-outline-warning" href="" role="button">Interogare 6.06-b</a></div>
+            <div class="col"><a class="btn btn-outline-warning" href="/query7" role="button">Interogare 6.06-a</a></div>
+            <div class="col"><a class="btn btn-outline-warning" href="/query8" role="button">Interogare 6.06-b</a></div>
         </div>
-    </div>
-
 
     </div>
+    </div>
+
+    <div class="container">
+        <div class="bg-light text-white mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="/create">
+                    <img src="https://cdn2.iconfinder.com/data/icons/flat-database/512/new_query-512.png" class="image-fluid custom-image">
+                        <p class="text-success px-5"><strong>Create tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                    <img src="https://icons.veryicon.com/png/o/education-technology/educational-icon/read-13.png" class="image-fluid custom-image">
+                    <p class="text-success px-5"><strong>Read tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5309/5309792.png" class="image-fluid custom-image">
+                    <p class="text-success px-5"><strong>Update tables</strong></p>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3807/3807871.png" class="image-fluid custom-image">
+                    <p class="text-success px-5"><strong>Delete tables</strong></p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
 
 
 <div th:fragment="myfooter">
-    <footer class="bg-dark text-light text-center py-3" >
+    <footer class="bg-dark text-light text-center py-3 mt-auto" >
         <ul class="nav justify-content-center border-bottom">
             <li class="nav-item"><a href="/home" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="/interogari" class="nav-link px-2 text-body-secondary">Interogari</a></li>
+            <li class="nav-item"><a href="/crudhome" class="nav-link px-2 text-body-secondary">Crud Home Page</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
         </ul>
     </footer>
