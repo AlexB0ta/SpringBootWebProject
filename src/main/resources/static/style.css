@@ -25,3 +25,8 @@ html, body {
     width: 700px;
     object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
 }
+
+.custom-image3 {
+    height: 650px; /* Set the desired height for all images */
+    width: 800px;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+<body class="d-flex flex-column">
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid pb-2">
+
+    <div class="p-5 my-2 bg-info rounded-3">
+        <div class="row">
+            <div class="col align-self-center">
+                <h2>Alegeti tabelul in care vreti sa faceti <strong>read</strong></h2>
+                <div class="dropdown pt-2 pr-5" >
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Alegeti tabelul
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="/readPersoana">Persoana</a></li>
+                        <li><a class="dropdown-item" href="/readDeviz">Deviz</a></li>
+                        <li><a class="dropdown-item" href="/readPiesa">Piesa</a></li>
+                        <li><a class="dropdown-item" href="/readPiesaDeviz">Piesa_Deviz</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <img src="https://www.datamation.com/wp-content/uploads/2023/06/dm-top-database-challenges.png" class="image-fluid rounded custom-image2" alt="Main-Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-info rounded-3">
+        <div class="row p-2">
+            <div class="col-xl-6">
+                <div class="container-fluid bg-success p-5 rounded-3" align="center">
+                    <a href="/readPersoana">
+                        <h4>Persoana</h4>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10841/10841342.png" class="image-fluid custom-image">
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-xl-6" align="center">
+                <div class="container-fluid bg-warning p-5 rounded-3">
+                    <a href="/readDeviz">
+                        <h4>Deviz</h4>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10841/10841342.png" class="image-fluid custom-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-xl-6">
+                <div class="container-fluid bg-dark p-5 rounded-3" align="center">
+                    <a href="/readPiesa">
+                        <h4>Piesa</h4>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10841/10841342.png" class="image-fluid custom-image">
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-xl-6" align="center">
+                <div class="container-fluid bg-danger p-5 rounded-3">
+                    <a href="/readPiesaDeviz">
+                        <h4>Piesa Deviz</h4>
+                        <img src="https://cdn-icons-png.flaticon.com/512/10841/10841342.png" class="image-fluid custom-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>

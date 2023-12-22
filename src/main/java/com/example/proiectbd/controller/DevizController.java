@@ -23,7 +23,7 @@ public class DevizController {
     public String afiseazaDevziele(Model model){
         List<Deviz> devize=execSel.firstSelProc();
         model.addAttribute("devize",devize);
-        return "afiseaza-devizele";
+        return "selects/afiseaza-devizele";
     }
 
     @GetMapping("/query2")
@@ -31,21 +31,21 @@ public class DevizController {
         model.addAttribute("cantitate",cantitate);
         List<Piesa> piese=execSel.secondSel(cantitate);
         model.addAttribute("piese",piese);
-        return "afiseaza-piesele";
+        return "selects/afiseaza-piesele";
     }
 
     @GetMapping("/query3")
     public String afiseazaSel4a(Model model){
         List<Sel4a> sel4aList=execSel.thirdSel();
         model.addAttribute("sel4aList",sel4aList);
-        return "afiseaza-sel4a";
+        return "selects/afiseaza-sel4a";
     }
 
     @GetMapping("/query4")
     public String afiseazaSel4b(Model model){
         List<Sel4b> sel4bList=execSel.fourthSel();
         model.addAttribute("sel4bList",sel4bList);
-        return "afiseaza-sel4b";
+        return "selects/afiseaza-sel4b";
     }
 
     @GetMapping("/query5")
@@ -53,28 +53,28 @@ public class DevizController {
         model.addAttribute("piesaDescriere",piesaDescriere);
         List<Deviz> devizList= execSel.fifthSelWithParam(piesaDescriere);
         model.addAttribute("devizList",devizList);
-        return "afiseaza-sel5a";
+        return "selects/afiseaza-sel5a";
     }
 
     @GetMapping("/query6")
     public String afiseazaSel5b(Model model){
         List<Piesa> piesaList=execSel.sixthSelProc();
         model.addAttribute("piesaList",piesaList);
-        return "afiseaza-sel5b";
+        return "selects/afiseaza-sel5b";
     }
 
     @GetMapping("/query7")
     public String afiseazaSel6a(Model model){
         List<Sel6a> sel6aList=execSel.seventhSelProc();
         model.addAttribute("sel6aList",sel6aList);
-        return "afiseaza-sel6a";
+        return "selects/afiseaza-sel6a";
     }
 
     @GetMapping("/query8")
     public String afiseazaSel6b(Model model){
         List<Sel6b> sel6bList=execSel.eightSelProc();
         model.addAttribute("sel6bList",sel6bList);
-        return "afiseaza-sel6b";
+        return "selects/afiseaza-sel6b";
     }
 
 }

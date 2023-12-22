@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Deviz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid full-height-container bg-light">
+
+    <div class="row mt-4 text-center" ><h2>Introduceti ID-ul devizului:</h2></div>
+
+
+    <form action="/readDeviz" method="get">
+        <div class="form-group">
+            <label class="mt-1" for="id_d">Introdu ID-ul:</label>
+            <input type="text" class="form-control" id="id_d" name="id_d" th:value="${id_d}">
+        </div>
+        <button type="submit" class="btn btn-success my-3">Afisati devizul cu id-ul selectat</button>
+    </form>
+
+    <table class="table mt-5">
+        <thead>
+        <tr class="bg-warning">
+            <th>ID</th>
+            <th>data_introducere</th>
+            <th>simptome</th>
+            <th>defect</th>
+            <th>data_constatare</th>
+            <th>data_finalizare</th>
+            <th>durata</th>
+            <th>manopera_ora</th>
+            <th>total</th>
+            <th>id_client</th>
+            <th>id_depanator</th>
+        </tr>
+        </thead>
+        <tbody>
+            <td th:text="${deviz.id_d}"></td>
+            <td th:text="${deviz.data_introducere}"></td>
+            <td th:text="${deviz.simptome}"></td>
+            <td th:text="${deviz.defect}"></td>
+            <td th:text="${deviz.data_constatare}"></td>
+            <td th:text="${deviz.data_finalizare}"></td>
+            <td th:text="${deviz.durata}"></td>
+            <td th:text="${deviz.manopera_ora}"></td>
+            <td th:text="${deviz.total}"></td>
+            <td th:text="${deviz.id_client}"></td>
+            <td th:text="${deviz.id_depanator}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>

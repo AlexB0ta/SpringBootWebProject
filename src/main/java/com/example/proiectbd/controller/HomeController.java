@@ -13,17 +13,37 @@ public class HomeController {
 
     @GetMapping("/interogari")
     public String interogari() {
-        return "interogari";
+        return "selects/interogari";
     }
 
     @GetMapping("/crudhome")
     public String crudhome() {
-        return "crud-home";
+        return "crud/crud-home";
     }
 
     @GetMapping("/create")
     public String create() {
-        return "create-table";
+        return "crud/create/create-table";
+    }
+
+    @GetMapping("/read")
+    public String read(){
+        return "crud/read/read-table";
+    }
+
+    @GetMapping("/update")
+    public String update(){
+        return "crud/update/update-table";
+    }
+
+    @GetMapping("/delete")
+    public String delete(){
+        return "crud/delete/delete-table";
+    }
+
+    @GetMapping("/about")
+    public String about(){
+        return "about";
     }
 
 }

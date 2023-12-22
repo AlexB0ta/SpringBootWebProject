@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Persoana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+
+<div th:replace="~{homepage :: myheader}"></div>
+
+<div class="container-fluid full-height-container bg-light">
+
+    <div class="row mt-4 text-center" ><h2>Introduceti datele noii persoane:</h2></div>
+
+
+    <form action="/updatePersoana2" method="get">
+        <div class="form-group">
+            <label class="mt-1" for="id">Introdu ID-ul persoanei care doresti sa o schimbii:</label>
+            <input type="text" class="form-control" id="id" name="id" th:value="${id}">
+            <label class="mt-1" for="nume">Introdu noul numele:</label>
+            <input type="text" class="form-control" id="nume" name="nume" th:value="${nume}">
+            <label class="mt-1" for="email">Introdu noul email-ul:</label>
+            <input type="text" class="form-control" id="email" name="email" th:value="${email}">
+            <label class="mt-1" for="adresa">Introdu noua adresa:</label>
+            <input type="text" class="form-control" id="adresa" name="adresa" th:value="${adresa}">
+        </div>
+        <button type="submit" class="btn btn-success my-3">Modificati noua persoana in tabel</button>
+    </form>
+
+    <table class="table mt-5">
+        <thead>
+        <tr class="bg-warning">
+            <th>ID</th>
+            <th>Nume</th>
+            <th>Email</th>
+            <th>Adresa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="persoana : ${persoanaList}">
+            <td th:text="${persoana.id}"></td>
+            <td th:text="${persoana.nume}"></td>
+            <td th:text="${persoana.email}"></td>
+            <td th:text="${persoana.adresa}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div th:replace="~{homepage :: myfooter}"></div>
+
+</body>
+</html>
